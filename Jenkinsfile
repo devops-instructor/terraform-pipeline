@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'hashicorp/terraform:1.15.2'
-            // args '--entrypoint=""'
+            args '--entrypoint=""'
         }
     }  
     stages {
