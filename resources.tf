@@ -12,7 +12,7 @@
 
 #   root_block_device {
 #     volume_size = 15
-#     volume_type = "gp2"
+#     volume_type = "gp3"
 #   }
 # }
 
