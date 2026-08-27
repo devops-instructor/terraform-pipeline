@@ -17,7 +17,23 @@ pipeline {
         stage('init') {
             steps {
                 sh 'env | sort'
-                sh 'terraform --version'
+                sh 'terraform init'
+            }
+        }
+        stage('apply') {
+            when {
+                expression { params.action == 'apply' }
+            }
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
+        stage('destroy') {
+            when {
+                expression { params.action == 'destroy' }
+            }
+            steps {
+                sh 'terraform destroy -auto-approve'
             }
         }
     }
