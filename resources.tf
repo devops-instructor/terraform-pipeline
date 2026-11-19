@@ -11,7 +11,7 @@ resource "aws_instance" "amazon_linux_2023" {
   }
 
   root_block_device {
-    volume_size = 12
+    volume_size = 11
     volume_type = "gp3"
   }
 }
