@@ -1,6 +1,6 @@
 resource "aws_instance" "amazon_linux_2023" {
-  ami           = "ami-08b7b9fdd7a1edf3d"
-  instance_type = "t2.medium"
+  ami           = "ami-062e367aff5bc494b"
+  instance_type = "t3.medium"
 
   key_name = "terraform-keypair"
 
@@ -11,7 +11,7 @@ resource "aws_instance" "amazon_linux_2023" {
   }
 
   root_block_device {
-    volume_size = 18
+    volume_size = 10
     volume_type = "gp3"
   }
 }
